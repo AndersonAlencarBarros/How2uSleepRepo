@@ -8,5 +8,3 @@ First, install [NodeJs](https://nodejs.org/en).
 	* npm install
 	* npm run build
 	* npm start
- 
-
