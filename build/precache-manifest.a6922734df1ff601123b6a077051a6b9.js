@@ -1,18 +1,18 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8dd86772594e616056521f2e3dcd8e0a",
+    "revision": "94eb3424bb511d8e71b16d65f8c1ed74",
     "url": "/How2uSleepRepo/index.html"
   },
   {
-    "revision": "d1f79e286b557588a413",
-    "url": "/How2uSleepRepo/static/css/main.9137a49d.chunk.css"
+    "revision": "c539a4ae38578586af36",
+    "url": "/How2uSleepRepo/static/css/main.3b9bd7a1.chunk.css"
   },
   {
     "revision": "a87057163a9deb8a3cdf",
     "url": "/How2uSleepRepo/static/js/2.f5b92a75.chunk.js"
   },
   {
-    "revision": "d1f79e286b557588a413",
+    "revision": "c539a4ae38578586af36",
     "url": "/How2uSleepRepo/static/js/main.1b252e10.chunk.js"
   },
   {

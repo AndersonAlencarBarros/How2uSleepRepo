@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/How2uSleepRepo/precache-manifest.2f681563caa61fde19ca6f2ad903ed90.js"
+  "/How2uSleepRepo/precache-manifest.a6922734df1ff601123b6a077051a6b9.js"
 );
 
 self.addEventListener('message', (event) => {
