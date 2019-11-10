@@ -1,10 +1,8 @@
-# How2uSleep
+# [How2uSleep](https://andersonalencarbarros.github.io/How2uSleepRepo/)
 
 First, install [NodeJs](https://nodejs.org/en).
 
-[How2uSleep](https://andersonalencarbarros.github.io/How2uSleepRepo/)
-
-### Needed, run into the folder
+### Run into the folder
 * ``` npm install react-chartjs-2 chart.js --save ```
 ### How to run ( _if without node_modules_):
 	* npm install
