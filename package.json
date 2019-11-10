@@ -2,8 +2,10 @@
   "name": "how2usleep",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://andersonalencarbarros.github.io/How2uSleepRepo/",
   "dependencies": {
     "chart.js": "^2.9.2",
+    "gh-pages": "^2.1.1",
     "react": "^16.11.0",
     "react-chartjs-2": "^2.8.0",
     "react-dom": "^16.11.0",
@@ -13,7 +15,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
