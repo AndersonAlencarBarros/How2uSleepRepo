@@ -6,5 +6,6 @@
 	* npm start
 
 ### Dependencies
+	* Install [NodeJs](https://nodejs.org/en/)
 	* npm install react-chartjs-2 chart.js --save
 
