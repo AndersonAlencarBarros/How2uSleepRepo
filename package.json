@@ -5,7 +5,6 @@
   "homepage": "https://andersonalencarbarros.github.io/How2uSleepRepo/",
   "dependencies": {
     "chart.js": "^2.9.2",
-    "gh-pages": "^2.1.1",
     "react": "^16.11.0",
     "react-chartjs-2": "^2.8.0",
     "react-dom": "^16.11.0",
@@ -33,5 +32,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^2.1.1"
   }
 }
