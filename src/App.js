@@ -1,113 +1,128 @@
 import React, { Component } from 'react';
-import logo from './logo512.png';
 import './App.css';
 import Chart from './components/Chart';
+import MenuBar from './components/MenuBar';
 
 class App extends Component {
   constructor(){
     super();
     this.state = {
-      chartData:{}
+      chartData1:{},    // Batimentos Cardiacos
+      chartData2:{},    // Esforco Respiratorio
+      chartData3:{},    // Saturacao de Oxigenio
+      chartData4:{},    // Fluxo Nasal
+      chartData5:{}     // Ronco
     }
   }
 
   componentWillMount(){
     // Ajax calls here
     this.setState({
-      chartData:{
-        labels: ['Boston', 'Worcester', 'Springfield', 'Lowell', 'Cambridge', 'New Bedford'],
+      chartData1:{
+        labels: ['Unidade de Medida'],
         datasets:[
           {
-            label:'Population',
+            label:'Batimentos Cardíacos',
             data:[
-              617594,
-              181045,
-              153060,
-              106519,
-              105162,
-              95072
+              1,
+              2,
+              3,
             ],
+            fill: false,
+            borderColor: "#ac0000",
             backgroundColor:[
-              'rgba(255, 99, 132, 0.6)',
-              'rgba(54, 162, 235, 0.6)',
-              'rgba(255, 206, 86, 0.6)',
-              'rgba(75, 192, 192, 0.6)',
-              'rgba(153, 102, 255, 0.6)',
-              'rgba(255, 159, 64, 0.6)',
-              'rgba(255, 99, 132, 0.6)'
+              'rgb(172, 0, 0)'
             ]
           }
         ]
-      }
+      },
+      chartData2:{
+        labels: ['Unidade de Medida'],
+        datasets:[
+          {
+            label:'Esforço Respiratório',
+            data:[
+              1,
+              2,
+              3,
+            ],
+            fill: false,
+            borderColor: "#ac0000",
+            backgroundColor:[
+              'rgb(172, 0, 0)'
+            ]
+          }
+        ]
+      },
+      chartData3:{
+        labels: ['Unidade de Medida'],
+        datasets:[
+          {
+            label:'Saturação de Oxigênio',
+            data:[
+              1,
+              2,
+              3,
+            ],
+            fill: false,
+            borderColor: "#ac0000",
+            backgroundColor:[
+              'rgb(172, 0, 0)'
+            ]
+          }
+        ]
+      },
+      chartData4:{
+        labels: ['Unidade de Medida'],
+        datasets:[
+          {
+            label:'Fluxo Nasal',
+            data:[
+              1,
+              2,
+              3,
+            ],
+            fill: false,
+            borderColor: "#ac0000",
+            backgroundColor:[
+              'rgb(172, 0, 0)'
+            ]
+          }
+        ]
+      },
+      chartData5:{
+        labels: ['Unidade de Medida'],
+        datasets:[
+          {
+            label:'Ronco',
+            data:[
+              1,
+              2,
+              3,
+            ],
+            fill: false,
+            borderColor: "#ac0000",
+            backgroundColor:[
+              'rgb(172, 0, 0)'
+            ]
+          }
+        ]
+      },
     });
   }
-
+  
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" width="50px" height= "50px" />
-          <h3 className="mainTitle">How2usleep</h3>
-        </div>
-        <Chart chartData={this.state.chartData} location="Massachusetts" legendPosition="bottom"/>
+        <MenuBar />
+        <Chart chartData={this.state.chartData1} title="Batimentos Cardíacos"  />
+        <Chart chartData={this.state.chartData2} title="Esforço Respiratório"   />
+        <Chart chartData={this.state.chartData3} title="Saturação de Oxigênio" />
+        <Chart chartData={this.state.chartData4} title="Fluxo Nasal"  />
+        <Chart chartData={this.state.chartData5} title="Ronco"  />
       </div>
     );
   }
 }
 
 export default App;
-
-
-// import React from 'react';
-// import {Bar} from 'react-chartjs-2';
-// import GraficoBarra from './components/GraficoBarra'
-// import GraficoLinha from './components/GraficoLinha'
-// import Chart from './components/Chart'
-
-// class App extends React.Component {
-//   render() {
-//     return (
-//       // <div>
-//       //   <GraficoBarra />
-//       // </div> 
-//       <div>
-//         <GraficoLinha name="Batimentos"/>
-//         <GraficoLinha name="Ronco"/>
-//       </div>
-//     );
-//   }
-// }
-
-// export default App
-
-
-  // getChartData(){
-  //   // Ajax calls here
-  //   this.setState({
-  //     chartData:{
-  //       labels: ['Boston', 'Worcester', 'Springfield', 'Lowell', 'Cambridge', 'New Bedford'],
-  //       datasets:[
-  //         {
-  //           label:'Population',
-  //           data:[
-  //             617594,
-  //             181045,
-  //             153060,
-  //             106519,
-  //             105162,
-  //             95072
-  //           ],
-  //           backgroundColor:[
-  //             'rgba(255, 99, 132, 0.6)',
-  //             'rgba(54, 162, 235, 0.6)',
-  //             'rgba(255, 206, 86, 0.6)',
-  //             'rgba(75, 192, 192, 0.6)',
-  //             'rgba(153, 102, 255, 0.6)',
-  //             'rgba(255, 159, 64, 0.6)',
-  //             'rgba(255, 99, 132, 0.6)'
-  //           ]
-  //         }
-  //       ]
-  //     }
-  //   });
-  // }

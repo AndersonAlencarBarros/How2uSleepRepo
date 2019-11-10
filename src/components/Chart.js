@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Bar, Line, Pie} from 'react-chartjs-2';
+import {Line} from 'react-chartjs-2';
 
 class Chart extends Component{
   constructor(props){
@@ -15,55 +15,37 @@ class Chart extends Component{
   static defaultProps = {
     displayTitle:true,
     displayLegend: true,
-    legendPosition:'right',
-    location:'City'
+    legendPosition:'right'
   }
 
   render(){
     return (
       <div className="chart">
-        <Bar
-          data={this.state.chartData}
-          options={{
-            title:{
-              display:this.props.displayTitle,
-              text:'Largest Cities In '+  this.props.location,
-              fontSize:25
-            },
-            legend:{
-              display:this.props.displayLegend,
-              position:this.props.legendPosition
-            }
-          }}
-        />
-
         <Line
           data={this.state.chartData}
+          height={400}
+          width={10}
           options={{
+            responsive: true,
+            maintainAspectRatio: false,
             title:{
               display:this.props.displayTitle,
-              text:'Largest Cities In '+this.props.location,
-              fontSize:25
+              text: this.props.title,
+              fontSize:25,
+              fontColor: "#ac0000"
             },
             legend:{
               display:this.props.displayLegend,
               position:this.props.legendPosition
-            }
-          }}
-        />
-
-        <Pie
-          data={this.state.chartData}
-          options={{
-            title:{
-              display:this.props.displayTitle,
-              text:'Largest Cities In '+this.props.location,
-              fontSize:25
             },
-            legend:{
-              display:this.props.displayLegend,
-              position:this.props.legendPosition
-            }
+            layout: {
+              padding: {
+                  top: 5,
+                  left: 15,
+                  right: 15,
+                  bottom: 15
+              }
+          }
           }}
         />
       </div>
