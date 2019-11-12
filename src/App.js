@@ -19,19 +19,27 @@ class App extends Component {
     // Ajax calls here
     this.setState({
       chartData1:{
-        labels: ['Unidade de Medida'],
+        labels: [1,2,3,4,5,6,7,8,,9,10],  // eixo X
         datasets:[
           {
             label:'Batimentos Cardíacos',
-            data:[
+            data:[     // eixo Y
               1,
-              2,
+              20,
               3,
+              100,
+              50,
+              10,
+              100,
+              20,
+              50,
+              125,
+              75
             ],
-            fill: false,
+            fill: true,
             borderColor: "#ac0000",
             backgroundColor:[
-              'rgb(172, 0, 0)'
+              'rgba(172, 0, 0,0.2)'
             ]
           }
         ]
@@ -119,7 +127,7 @@ class App extends Component {
         <Chart chartData={this.state.chartData2} title="Esforço Respiratório"   />
         <Chart chartData={this.state.chartData3} title="Saturação de Oxigênio" />
         <Chart chartData={this.state.chartData4} title="Fluxo Nasal"  />
-        <Chart chartData={this.state.chartData5} title="Ronco"  />
+        <Chart chartData={this.state.chartData5} title="Ruído"  />
       </div>
     );
   }
