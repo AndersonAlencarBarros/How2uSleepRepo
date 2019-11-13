@@ -15,7 +15,7 @@ class Chart extends Component{
   static defaultProps = {
     displayTitle:true,
     displayLegend: true,
-    legendPosition:'right'
+    legendPosition:'bottom'
   }
 
   render(){
@@ -31,7 +31,7 @@ class Chart extends Component{
             title:{
               display:this.props.displayTitle,
               text: this.props.title,
-              fontSize:25,
+              fontSize:20,
               fontColor: "#ac0000"
             },
             legend:{

@@ -5,6 +5,12 @@ import MenuBar from './components/MenuBar';
 import html2canvas from "html2canvas";
 // import jsPDF from "jspdf";
 
+var Tempo = [1,2,3,4,5,6,7,8,9,10,11];
+var BatimentosCardiacos = [1,20,3,50,100,50,7,80,10,40,120];
+var EsforcoRespiratorio = [];
+var SaturacaoOxigenio = [];
+var FluxoNasal = [];
+var Ruido = [];
 
 class App extends Component {
   constructor(){
@@ -22,23 +28,11 @@ class App extends Component {
     // Ajax calls here
     this.setState({
       chartData1:{
-        labels: [1,2,3,4,5,6,7,8,15,9,10],  // eixo X
+        labels: Tempo,
         datasets:[
           {
             label:'Batimentos Cardíacos',
-            data:[     // eixo Y
-              1,
-              20,
-              3,
-              100,
-              50,
-              10,
-              100,
-              20,
-              50,
-              125,
-              75
-            ],
+            data: BatimentosCardiacos,
             fill: true,
             borderColor: "#ac0000",
             backgroundColor:[
@@ -48,15 +42,11 @@ class App extends Component {
         ]
       },
       chartData2:{
-        labels: ['Unidade de Medida'],
+        labels: Tempo,
         datasets:[
           {
             label:'Esforço Respiratório',
-            data:[
-              1,
-              2,
-              3,
-            ],
+            data: EsforcoRespiratorio,
             fill: false,
             borderColor: "#ac0000",
             backgroundColor:[
@@ -66,15 +56,11 @@ class App extends Component {
         ]
       },
       chartData3:{
-        labels: ['Unidade de Medida'],
+        labels: Tempo,
         datasets:[
           {
             label:'Saturação de Oxigênio',
-            data:[
-              1,
-              2,
-              3,
-            ],
+            data: SaturacaoOxigenio,
             fill: false,
             borderColor: "#ac0000",
             backgroundColor:[
@@ -84,15 +70,11 @@ class App extends Component {
         ]
       },
       chartData4:{
-        labels: ['Unidade de Medida'],
+        labels: Tempo,
         datasets:[
           {
             label:'Fluxo Nasal',
-            data:[
-              1,
-              2,
-              3,
-            ],
+            data: FluxoNasal,
             fill: false,
             borderColor: "#ac0000",
             backgroundColor:[
@@ -102,15 +84,11 @@ class App extends Component {
         ]
       },
       chartData5:{
-        labels: ['Unidade de Medida'],
+        labels: Tempo,
         datasets:[
           {
             label:'Ronco',
-            data:[
-              1,
-              2,
-              3,
-            ],
+            data: Ruido,
             fill: false,
             borderColor: "#ac0000",
             backgroundColor:[
@@ -136,28 +114,30 @@ class App extends Component {
       })
       .catch(err => console.log(err.message));
   }
- 
-  
+
+
   render() {
     return (
       <div className="App">
         <MenuBar />
         <div className="divPrint" style={{width:1000, height: 400}} >
           <Chart chartData={this.state.chartData1} title="Batimentos Cardíacos"  />
+          <button onClick={() => console.log("ici") || this.demoFromHTML()}>
+              Download em PDF
+            </button>
         </div>
-
-        <div>
-        <button onClick={() => console.log("ici") || this.demoFromHTML()}>
-            Download PDF
-          </button>
+        <div style={{width:1000, height: 400}}>
+          <Chart chartData={this.state.chartData2} title="Esforço Respiratório"   />
         </div>
-
-        <Chart chartData={this.state.chartData2} title="Esforço Respiratório"   />
-        <Chart chartData={this.state.chartData3} title="Saturação de Oxigênio" />
-        <Chart chartData={this.state.chartData4} title="Fluxo Nasal"  />
-        <Chart chartData={this.state.chartData5} title="Ruído"  />
-
-        
+        <div style={{width:1000, height: 400}}>
+          <Chart chartData={this.state.chartData3} title="Saturação de Oxigênio" />
+        </div>
+        <div style={{width:1000, height: 400}}>
+          <Chart chartData={this.state.chartData4} title="Fluxo Nasal"  />
+        </div>
+        <div style={{width:1000, height: 400}}>
+            <Chart chartData={this.state.chartData5} title="Ruído"  />
+        </div>
       </div>
     );
   }
