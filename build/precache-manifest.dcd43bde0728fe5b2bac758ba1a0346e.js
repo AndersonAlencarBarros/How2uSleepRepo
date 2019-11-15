@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "27ffb090d83b2368edaa659056c0bb53",
+    "revision": "df2df371c0a690db6d8053ccdd8cbc66",
     "url": "/How2uSleepRepo/index.html"
   },
   {
-    "revision": "93c2b4faace6a2efe61b",
-    "url": "/How2uSleepRepo/static/css/main.3b9bd7a1.chunk.css"
+    "revision": "3b392230b1e290ac94c7",
+    "url": "/How2uSleepRepo/static/css/main.5e46a257.chunk.css"
   },
   {
-    "revision": "0c766914de0585919ea7",
-    "url": "/How2uSleepRepo/static/js/2.a9f929b1.chunk.js"
+    "revision": "e4022f3f1eb2f48f335a",
+    "url": "/How2uSleepRepo/static/js/2.e5702f07.chunk.js"
   },
   {
-    "revision": "93c2b4faace6a2efe61b",
-    "url": "/How2uSleepRepo/static/js/main.87fe833d.chunk.js"
+    "revision": "3b392230b1e290ac94c7",
+    "url": "/How2uSleepRepo/static/js/main.5d2e6677.chunk.js"
   },
   {
     "revision": "27d5415d74729fd8cf13",

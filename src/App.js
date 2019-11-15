@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
 import './App.css';
-import Chart from './components/Chart';
-import MenuBar from './components/MenuBar';
+import Chart from './Charts/Chart';
+import MenuBar from './Menu/MenuBar';
+import Form from './Form/Form';
 import html2canvas from "html2canvas";
 // import jsPDF from "jspdf";
 
 var Tempo = [1,2,3,4,5,6,7,8,9,10,11];
 var BatimentosCardiacos = [1,20,3,50,100,50,7,80,10,40,120];
-var EsforcoRespiratorio = [];
+var EsforcoRespiratorio = [1,20,3,50,100,50,7,80,10,40,120];
 var SaturacaoOxigenio = [];
 var FluxoNasal = [];
-var Ruido = [];
+var Ruido = []; 
 
 class App extends Component {
   constructor(){
@@ -115,28 +116,39 @@ class App extends Component {
       .catch(err => console.log(err.message));
   }
 
-
-  render() {
+  
+  
+  render() {    
     return (
       <div className="App">
         <MenuBar />
-        <div className="divPrint" style={{width:1000, height: 400}} >
+        <hr style={{color:"#ac0000"}}></hr>
+        <div className="divPrint" style={{width:1000, height: 400, margin: "auto"}} >
           <Chart chartData={this.state.chartData1} title="Batimentos Cardíacos"  />
-          <button onClick={() => console.log("ici") || this.demoFromHTML()}>
+
+          <button className="pdfButton" onClick={() => console.log("ici") || this.demoFromHTML()}>
               Download em PDF
             </button>
         </div>
-        <div style={{width:1000, height: 400}}>
+
+        <div style={{width:1000, height: 400, margin: "auto"}}>
           <Chart chartData={this.state.chartData2} title="Esforço Respiratório"   />
         </div>
-        <div style={{width:1000, height: 400}}>
+
+        <div style={{width:1000, height: 400, margin: "auto"}}>
           <Chart chartData={this.state.chartData3} title="Saturação de Oxigênio" />
         </div>
-        <div style={{width:1000, height: 400}}>
+
+        <div style={{width:1000, height: 400, margin: "auto"}}>
           <Chart chartData={this.state.chartData4} title="Fluxo Nasal"  />
         </div>
-        <div style={{width:1000, height: 400}}>
+
+        <div style={{width:1000, height: 400, margin: "auto"}}>
             <Chart chartData={this.state.chartData5} title="Ruído"  />
+        </div>
+        
+        <div>
+          <Form />
         </div>
       </div>
     );
