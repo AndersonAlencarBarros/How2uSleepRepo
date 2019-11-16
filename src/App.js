@@ -3,6 +3,7 @@ import './App.css';
 import Chart from './Charts/Chart';
 import MenuBar from './Menu/MenuBar';
 import Form from './Form/Form';
+import EmailForm from './Form/EmailForm';
 import html2canvas from "html2canvas";
 // import jsPDF from "jspdf";
 
@@ -11,7 +12,7 @@ var BatimentosCardiacos = [1,20,3,50,100,50,7,80,10,40,120];
 var EsforcoRespiratorio = [1,20,3,50,100,50,7,80,10,40,120];
 var SaturacaoOxigenio = [];
 var FluxoNasal = [];
-var Ruido = []; 
+var Ruido = [];
 
 class App extends Component {
   constructor(){
@@ -116,9 +117,9 @@ class App extends Component {
       .catch(err => console.log(err.message));
   }
 
-  
-  
-  render() {    
+
+
+  render() {
     return (
       <div className="App">
         <MenuBar />
@@ -146,10 +147,15 @@ class App extends Component {
         <div style={{width:1000, height: 400, margin: "auto"}}>
             <Chart chartData={this.state.chartData5} title="Ruído"  />
         </div>
-        
+
         <div>
           <Form />
         </div>
+
+        <div>
+          <EmailForm />
+        </div>
+
       </div>
     );
   }
