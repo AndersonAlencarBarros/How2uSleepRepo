@@ -1,6 +1,7 @@
 .App-logo {
   height: 10vmin;
   width: 10vmin ;
+  animation: App-logo-spin infinite 10s linear;
   float: left;
 }
 

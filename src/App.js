@@ -5,6 +5,7 @@ import MenuBar from './Menu/MenuBar';
 import Form from './Form/Form';
 import EmailForm from './Form/EmailForm';
 import html2canvas from "html2canvas";
+import axios from 'axios';
 // import jsPDF from "jspdf";
 
 var Tempo = [1,2,3,4,5,6,7,8,9,10,11];
@@ -22,11 +23,23 @@ class App extends Component {
       chartData2:{},    // Esforco Respiratorio
       chartData3:{},    // Saturacao de Oxigenio
       chartData4:{},    // Fluxo Nasal
-      chartData5:{}     // Ronco
+      chartData5:{},     // Ronco
+      mydata: []
     }
   }
 
   componentWillMount(){
+    this.getChartData();
+  }
+
+  componentDidMount(){
+      axios.get('https://jsonplaceholder.typicode.com/users').then(result => {
+        console.log(result)
+          this.setState({ mydata: result.data});
+      });
+  }
+
+  getChartData(){
     // Ajax calls here
     this.setState({
       chartData1:{
@@ -152,8 +165,14 @@ class App extends Component {
           <Form />
         </div>
 
-        <div>
+        <div style={{width:1000, height: 400, margin: "auto"}}>
           <EmailForm />
+        </div>
+
+        <div>
+            <ul>
+                {this.state.mydata.map(person => <li>{person.email}</li>)}
+            </ul>
         </div>
 
       </div>
