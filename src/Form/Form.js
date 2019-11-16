@@ -2,7 +2,7 @@ import React from "react";
 import { Formik } from "formik";
 import * as Yup from "yup";
 import "./Form.css";
- 
+
 const Form = () => (
   <div className="app">
     <h1> Relatório</h1>
@@ -31,10 +31,11 @@ const Form = () => (
           handleSubmit,
           handleReset
         } = props;
+
         return (
           <form onSubmit={handleSubmit}>
 
-            <label htmlFor="email">Nome Completo</label>
+            <label htmlFor="name">Nome Completo</label>
             <input
               name="name"
               type="string"
@@ -45,12 +46,10 @@ const Form = () => (
               className={errors.name && touched.name && "error"}
             />
 
-            <label htmlFor="email" style={{ display: "block" }}>
-              Email
-            </label>
+        <label htmlFor="email" style={{ display: "block"}}>Email</label>
             <input
               id="email"
-              placeholder="Enter your email"
+              placeholder="Email"
               type="text"
               value={values.email}
               onChange={handleChange}
@@ -63,7 +62,7 @@ const Form = () => (
             />
             {errors.email && touched.email && (
               <div className="input-feedback">{errors.email}</div>
-            )}         
+            )}
 
             <button className="SubmitButton" type="submit" disabled={isSubmitting}>
               Enviar
@@ -74,5 +73,5 @@ const Form = () => (
     </Formik>
   </div>
 );
- 
+
 export default Form;

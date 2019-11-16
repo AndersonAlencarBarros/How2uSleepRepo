@@ -6,7 +6,7 @@ import Form from './Form/Form';
 import EmailForm from './Form/EmailForm';
 import html2canvas from "html2canvas";
 import axios from 'axios';
-// import jsPDF from "jspdf";
+import jsPDF from "jspdf";
 
 var Tempo = [1,2,3,4,5,6,7,8,9,10,11];
 var BatimentosCardiacos = [1,20,3,50,100,50,7,80,10,40,120];
@@ -14,6 +14,12 @@ var EsforcoRespiratorio = [1,20,3,50,100,50,7,80,10,40,120];
 var SaturacaoOxigenio = [];
 var FluxoNasal = [];
 var Ruido = [];
+
+const divStyle = {
+    width:1000,
+    height: 400,
+    margin: "auto"
+};
 
 class App extends Component {
   constructor(){
@@ -33,6 +39,7 @@ class App extends Component {
   }
 
   componentDidMount(){
+      // this.interval = setInterval(this.fetchNews, 1000); chamar dados da API a cada 1 seg
       axios.get('https://jsonplaceholder.typicode.com/users').then(result => {
         console.log(result)
           this.setState({ mydata: result.data});
@@ -112,24 +119,34 @@ class App extends Component {
           }
         ]
       },
-    });
+  }); //fim do setState()
   }
+
+// https://mrrio.github.io/
+// https://www.npmjs.com/package/jspdf
+// https://github.com/MrRio/jsPDF
 
   demoFromHTML() {
-    const pdfConverter = require("jspdf");
-    let input = window.document.getElementsByClassName("divPrint")[0];
-    html2canvas(input)
-      .then(canvas => {
-        console.log(canvas);
-        const imgData = canvas.toDataURL("image/png");
-        const pdf = new pdfConverter("l", "pt");
-        pdf.addImage(imgData, "JPEG", 50, 100, 800,400); // eixo x e y, largura e altura
-        // pdf.save("BatimentosCardiacos.pdf");
-        pdf.output('dataurlnewwindow');
-      })
-      .catch(err => console.log(err.message));
-  }
+    var doc = new jsPDF();
+    doc.text(20, 20, 'Hello world!');
+    doc.text(20, 30, 'This is client-side Javascript, pumping out a PDF.');
+    doc.addPage();
+    doc.text(20, 20, 'Do you like that?');
+    doc.output('dataurlnewwindow');
 
+    // const pdfConverter = require("jspdf");
+    // let input = window.document.getElementsByClassName("divPrint")[0];
+    // html2canvas(input)
+    //   .then(canvas => {
+    //     console.log(canvas);
+    //     const imgData = canvas.toDataURL("image/png");
+    //     const pdf = new pdfConverter("l", "pt");
+    //     pdf.addImage(imgData, "JPEG", 50, 50, 300, 150); // eixo x e y, largura e altura
+    //     // pdf.save("BatimentosCardiacos.pdf");
+    //     pdf.output('dataurlnewwindow');
+    //   })
+    //   .catch(err => console.log(err.message));
+  }
 
 
   render() {
@@ -137,41 +154,41 @@ class App extends Component {
       <div className="App">
         <MenuBar />
         <hr style={{color:"#ac0000"}}></hr>
-        <div className="divPrint" style={{width:1000, height: 400, margin: "auto"}} >
-          <Chart chartData={this.state.chartData1} title="Batimentos Cardíacos"  />
 
-          <button className="pdfButton" onClick={() => console.log("ici") || this.demoFromHTML()}>
-              Download em PDF
-            </button>
+        <div className="divPrint" style={divStyle} >
+          <Chart chartData={this.state.chartData1} title="Batimentos Cardíacos"  />
         </div>
 
-        <div style={{width:1000, height: 400, margin: "auto"}}>
+        <div className="divPrint1" style={divStyle}>
           <Chart chartData={this.state.chartData2} title="Esforço Respiratório"   />
         </div>
 
-        <div style={{width:1000, height: 400, margin: "auto"}}>
+        <div className="divPrint2" style={divStyle}>
           <Chart chartData={this.state.chartData3} title="Saturação de Oxigênio" />
         </div>
 
-        <div style={{width:1000, height: 400, margin: "auto"}}>
+        <div className="divPrint3" style={divStyle}>
           <Chart chartData={this.state.chartData4} title="Fluxo Nasal"  />
         </div>
 
-        <div style={{width:1000, height: 400, margin: "auto"}}>
+        <div className="divPrint4" style={divStyle}>
             <Chart chartData={this.state.chartData5} title="Ruído"  />
         </div>
 
-        <div>
+        <div className="divPrint5" style={divStyle}>
           <Form />
         </div>
 
-        <div style={{width:1000, height: 400, margin: "auto"}}>
-          <EmailForm />
+        <div id="wrapper">
+            <button className="pdfButton" onClick={() => console.log("ici") || this.demoFromHTML()}>
+                Relatório
+              </button>
         </div>
 
-        <div>
+        <div style={divStyle}>
+            <h5>AJAX Example</h5>
             <ul>
-                {this.state.mydata.map(person => <li>{person.email}</li>)}
+                {this.state.mydata.map(person => <li key={person.id}>{person.name}</li>)}
             </ul>
         </div>
 
