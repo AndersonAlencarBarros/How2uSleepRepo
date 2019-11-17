@@ -23,18 +23,19 @@
 }
 
   /* style={{width:1000, height: 400, margin: "auto"}} */
-.divPrint{
-    /* height: 10%;
-    width: 70% ; */
-    /* margin: auto; */
+  
+/* .divPrint{
+    height: 10%;
+    width: 70% ;
+    margin: auto;
     text-align: center;
     padding-top: 20px;
-    /* padding-right: 30px; */
+    padding-right: 30px;
     padding-bottom: 70px;
-    /* padding-left: 80px; */
-}
+    padding-left: 80px;
+} */
 
-#wrapper {
+#BotaoRelatorio {
   /* border: 1px solid black; */
   display: flex;
   align-items: center;
