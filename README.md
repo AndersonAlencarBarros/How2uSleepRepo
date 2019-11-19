@@ -8,14 +8,17 @@
 First at all, install [NodeJs](https://nodejs.org/en) and [Git](https://git-scm.com/)
 
 ## Run
-``` git clone https://github.com/AndersonAlencarBarros/How2uSleepRepo.git```
 
-```cd How2uSleepRepo```
+<p align="center">
+  <code> git clone https://github.com/AndersonAlencarBarros/How2uSleepRepo.git</code>
 
-Now on the folder, run the following commands:
+  <code>cd How2uSleepRepo</code>
 
-```npm install```
+  Now on the folder, run the following commands:
 
-```npm run build```
+  <code>npm install</code>
 
-```npm start```
+  <code>npm run build</code>
+
+  <code>npm start</code>
+</p>
