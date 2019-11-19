@@ -1,8 +1,15 @@
-# [How2uSleep](https://andersonalencarbarros.github.io/How2uSleepRepo/)
+
+<p align="center">
+  <a href="https://andersonalencarbarros.github.io/How2uSleepRepo/">
+    <img src="./1.png"><br/>
+  </a>
+  Click to check it out!
+</p>
 
 First at all, install [NodeJs](https://nodejs.org/en) and [Git](https://git-scm.com/)
 
-## Run on Terminal
+## Run
+
 ``` git clone https://github.com/AndersonAlencarBarros/How2uSleepRepo.git```
 
 ```cd How2uSleepRepo```

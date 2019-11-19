@@ -110,7 +110,7 @@ class App extends Component {
         labels: Tempo,
         datasets:[
           {
-            label:'Ronco',
+            label:'Ruído',
             data: Ruido,
             fill: true,
             borderColor: "#ac0000",
