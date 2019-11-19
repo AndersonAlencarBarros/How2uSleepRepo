@@ -3,7 +3,7 @@
     <img src="./icone.png"><br/>
 </p>
 
-<p align="center">
+<p align="center" size="10">
   <a href="https://andersonalencarbarros.github.io/How2uSleepRepo/">How2uSleep</a>
 </p>
 
