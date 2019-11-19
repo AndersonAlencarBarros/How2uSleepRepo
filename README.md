@@ -1,4 +1,11 @@
-# [How2uSleep](https://andersonalencarbarros.github.io/How2uSleepRepo/)
+
+<p align="center">
+    <img src="./icone.png"><br/>
+</p>
+
+<p align="center">
+  <a href="https://andersonalencarbarros.github.io/How2uSleepRepo/">How2uSleep</a>
+</p>
 
 First at all, install [NodeJs](https://nodejs.org/en) and [Git](https://git-scm.com/)
 
