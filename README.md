@@ -1,15 +1,13 @@
 
 <p align="center">
-    <img src="./icone.png"><br/>
-</p>
-
-<p align="center" size="10">
-  <a href="https://andersonalencarbarros.github.io/How2uSleepRepo/">How2uSleep</a>
+  <a href="https://andersonalencarbarros.github.io/How2uSleepRepo/">
+    <img src="./1.png"><br/>
+  </a>
 </p>
 
 First at all, install [NodeJs](https://nodejs.org/en) and [Git](https://git-scm.com/)
 
-## Run on Terminal
+## Run
 ``` git clone https://github.com/AndersonAlencarBarros/How2uSleepRepo.git```
 
 ```cd How2uSleepRepo```
