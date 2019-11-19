@@ -3,22 +3,21 @@
   <a href="https://andersonalencarbarros.github.io/How2uSleepRepo/">
     <img src="./1.png"><br/>
   </a>
+  Click to check it out!
 </p>
 
 First at all, install [NodeJs](https://nodejs.org/en) and [Git](https://git-scm.com/)
 
 ## Run
 
-<p align="center">
-  <code> git clone https://github.com/AndersonAlencarBarros/How2uSleepRepo.git</code>
+``` git clone https://github.com/AndersonAlencarBarros/How2uSleepRepo.git```
 
-  <code>cd How2uSleepRepo</code>
+```cd How2uSleepRepo```
 
-  Now on the folder, run the following commands:
+Now on the folder, run the following commands:
 
-  <code>npm install</code>
+```npm install```
 
-  <code>npm run build</code>
+```npm run build```
 
-  <code>npm start</code>
-</p>
+```npm start```
