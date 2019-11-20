@@ -181,8 +181,8 @@ class App extends Component {
                     .then(function (dataUrl) {
                         img.src = dataUrl;
                         doc.addImage(img, "JPEG", 0, 150, 700, 400);
-                        doc.output('dataurlnewwindow');
-                        // doc.save("Relatorio.pdf");
+                        // doc.output('dataurlnewwindow');
+                        doc.save("Relatorio.pdf");
                     })
                 })
             })

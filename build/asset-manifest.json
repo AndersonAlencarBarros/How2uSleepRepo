@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/How2uSleepRepo/static/css/main.88bdaef9.chunk.css",
-    "main.js": "/How2uSleepRepo/static/js/main.9a6d68d9.chunk.js",
-    "main.js.map": "/How2uSleepRepo/static/js/main.9a6d68d9.chunk.js.map",
+    "main.js": "/How2uSleepRepo/static/js/main.82a41efb.chunk.js",
+    "main.js.map": "/How2uSleepRepo/static/js/main.82a41efb.chunk.js.map",
     "runtime-main.js": "/How2uSleepRepo/static/js/runtime-main.18a9a8cd.js",
     "runtime-main.js.map": "/How2uSleepRepo/static/js/runtime-main.18a9a8cd.js.map",
-    "static/js/2.df6e1448.chunk.js": "/How2uSleepRepo/static/js/2.df6e1448.chunk.js",
-    "static/js/2.df6e1448.chunk.js.map": "/How2uSleepRepo/static/js/2.df6e1448.chunk.js.map",
+    "static/js/2.2b541d59.chunk.js": "/How2uSleepRepo/static/js/2.2b541d59.chunk.js",
+    "static/js/2.2b541d59.chunk.js.map": "/How2uSleepRepo/static/js/2.2b541d59.chunk.js.map",
     "index.html": "/How2uSleepRepo/index.html",
-    "precache-manifest.5d950f1952a646b214054992c5eb24ef.js": "/How2uSleepRepo/precache-manifest.5d950f1952a646b214054992c5eb24ef.js",
+    "precache-manifest.227f1ad69d32ef65fff46e6fe12edd65.js": "/How2uSleepRepo/precache-manifest.227f1ad69d32ef65fff46e6fe12edd65.js",
     "service-worker.js": "/How2uSleepRepo/service-worker.js",
     "static/css/main.88bdaef9.chunk.css.map": "/How2uSleepRepo/static/css/main.88bdaef9.chunk.css.map",
     "static/media/logo512.png": "/How2uSleepRepo/static/media/logo512.df180eb6.png"
   },
   "entrypoints": [
     "static/js/runtime-main.18a9a8cd.js",
-    "static/js/2.df6e1448.chunk.js",
+    "static/js/2.2b541d59.chunk.js",
     "static/css/main.88bdaef9.chunk.css",
-    "static/js/main.9a6d68d9.chunk.js"
+    "static/js/main.82a41efb.chunk.js"
   ]
 }
