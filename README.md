@@ -21,3 +21,9 @@ Now on the folder, run the following commands:
 ```npm run build```
 
 ```npm start```
+
+## Authors
+
+* Anderson de Alencar
+* Djeysi Alves
+* Uendel Couto

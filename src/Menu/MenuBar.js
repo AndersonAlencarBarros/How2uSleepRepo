@@ -6,7 +6,7 @@ class MenuBar extends Component{
         return(
             <div className="App-header">
                 <img src={logo} className="App-logo" alt="logo" />
-                <h3 className="mainTitle">How2usleep</h3>
+                <h3 className="mainTitle">How2uSleep</h3>
             </div>
         );
     }

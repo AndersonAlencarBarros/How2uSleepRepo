@@ -3,9 +3,6 @@ import './App.css';
 import Chart from './Charts/Chart';
 import MenuBar from './Menu/MenuBar';
 import Form from './Form/Form';
-// import EmailForm from './Form/EmailForm';
-// import html2canvas from "html2canvas";
-import axios from 'axios';
 import * as jsPDF from "jspdf";
 import domtoimage from 'dom-to-image';
 
@@ -39,13 +36,13 @@ class App extends Component {
     this.getChartData();
   }
 
-  componentDidMount(){
-      // this.interval = setInterval(this.fetchNews, 1000); chamar dados da API a cada 1 seg
-      axios.get('https://jsonplaceholder.typicode.com/users').then(result => {
-        console.log(result)
-          this.setState({ mydata: result.data});
-      });
-  }
+  // componentDidMount(){
+  //     // this.interval = setInterval(this.fetchNews, 1000); chamar dados da API a cada 1 seg
+  //     axios.get('https://jsonplaceholder.typicode.com/users').then(result => {
+  //       console.log(result)
+  //         this.setState({ mydata: result.data});
+  //     });
+  // }
 
   getChartData(){
     // Ajax calls here
@@ -185,15 +182,12 @@ class App extends Component {
                         img.src = dataUrl;
                         doc.addImage(img, "JPEG", 0, 150, 700, 400);
                         doc.output('dataurlnewwindow');
+                        // doc.save("Relatorio.pdf");
                     })
                 })
             })
         })
     })
-
-
-
-
 }
 
 
@@ -232,14 +226,6 @@ class App extends Component {
                 Relatório
               </button>
         </div>
-
-        <div style={divStyle}>
-            <h5>AJAX Example</h5>
-            <ul>
-                {this.state.mydata.map(person => <li key={person.id}>{person.name}</li>)}
-            </ul>
-        </div>
-
       </div>
     );
   }
@@ -247,6 +233,13 @@ class App extends Component {
 
 export default App;
 
+
+// <div style={divStyle}>
+//     <h5>AJAX Example</h5>
+//     <ul>
+//         {this.state.mydata.map(person => <li key={person.id}>{person.name}</li>)}
+//     </ul>
+// </div>
 
 // const pdfConverter = require("jspdf");
 // let input = window.document.getElementsByClassName("divPrint")[0];
