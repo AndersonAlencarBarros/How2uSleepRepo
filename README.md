@@ -10,9 +10,9 @@ First at all, install [NodeJs](https://nodejs.org/en) and [Git](https://git-scm.
 
 ## Run
 
-``` git clone https://github.com/AndersonAlencarBarros/How2uSleepRepo.git```
+Download the repository or use if you have Git installed
 
-```cd How2uSleepRepo```
+``` git clone https://github.com/AndersonAlencarBarros/How2uSleepRepo.git```
 
 Now on the folder, run the following commands:
 
