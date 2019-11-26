@@ -1,43 +1,33 @@
-.App-logo {
-  height: 10vmin;
-  width: 10vmin ;
-  animation: App-logo-spin infinite 10s linear;
-  float: left;
-}
 
-.App-header {
-  background-color: white;
-  /* border-bottom: solid #c0392b; */
-  min-height: 10vh;
-  display: flex;
-  /* flex-direction: column; */
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: rgb(172, 0, 0);
-}
+  button {
+    max-width: 150px;
+    margin: 20px 0;
+    padding: 12px 20px;
+    border-style: none;
+    border-radius: 5px;
+    background-color: #ac0000;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+    font-size: 17px;
+    font-weight: 500;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    -webkit-appearance: none;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 
-.mainTitle{
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-style: italic;
-}
+  button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed !important;
+  }
 
-  /* style={{width:1000, height: 400, margin: "auto"}} */
-  
-/* .divPrint{
-    height: 10%;
-    width: 70% ;
-    margin: auto;
-    text-align: center;
-    padding-top: 20px;
-    padding-right: 30px;
-    padding-bottom: 70px;
-    padding-left: 80px;
-} */
+  button + button {
+    margin-left: 0.5rem;
+  }
 
-#BotaoRelatorio {
-  /* border: 1px solid black; */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  button.outline {
+    background-color: #eee;
+    border: 1px solid #aaa;
+    color: #555;
+  }
