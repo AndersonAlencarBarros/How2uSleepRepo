@@ -3,6 +3,7 @@ import logo from './logo512.png';
 import * as jsPDF from "jspdf";
 import domtoimage from 'dom-to-image';
 import './Menu.css';
+import { Link } from 'react-router-dom'
 
 class MenuBar extends Component{
 
@@ -80,12 +81,10 @@ class MenuBar extends Component{
         return(
             <div className="App-header">
                 <ul className="menuBar">
-                 <li className="itemLeft"><img src={logo} className="App-logo" alt="logo" /></li>
-                 <li className="itemLeft"><h3 className="mainTitle">How2uSleep</h3></li>
+                <Link to="/"><li className="itemLeft"><img src={logo} className="App-logo" alt="logo" /></li></Link>
+                <li className="itemLeft"><h3 className="mainTitle">How2uSleep</h3></li>
                  <li className="itemRight">
-                     <button className="Sobre" onClick={() => console.log("Sobre")}>
-                         Sobre
-                       </button>
+                    <Link to="/Sobre"><button>Sobre</button></Link>
                  </li>
                  <li className="itemRight">
                      <button className="Sobre" onClick={() => console.log("Relatorio") || this.demoFromHTML()}>

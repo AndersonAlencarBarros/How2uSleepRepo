@@ -23,13 +23,11 @@ const Form = () => (
         const {
           values,
           touched,
-          errors,
-          dirty,
+          errors, 
           isSubmitting,
           handleChange,
           handleBlur,
-          handleSubmit,
-          handleReset
+          handleSubmit
         } = props;
 
         return (
