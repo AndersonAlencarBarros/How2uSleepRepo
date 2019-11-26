@@ -1,8 +1,18 @@
 
+h3 {
+    color: rgb(172, 0, 0);
+}
+
 #sobreDiv {
-    padding: 50px;
+    padding: 5vh;
 }
 
 #sobreTitle {
     color: rgb(172, 0, 0);
+    font-size: 5vh;
+}
+
+#textoSobre {
+    margin: 0;
+    font-size: 2vh;
 }

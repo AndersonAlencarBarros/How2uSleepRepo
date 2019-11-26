@@ -81,16 +81,27 @@ class MenuBar extends Component{
         return(
             <div className="App-header">
                 <ul className="menuBar">
-                <Link to="/"><li className="itemLeft"><img src={logo} className="App-logo" alt="logo" /></li></Link>
-                <li className="itemLeft"><h3 className="mainTitle">How2uSleep</h3></li>
-                 <li className="itemRight">
-                    <Link to="/Sobre"><button>Sobre</button></Link>
-                 </li>
-                 <li className="itemRight">
-                     <button className="Sobre" onClick={() => console.log("Relatorio") || this.demoFromHTML()}>
-                         Relatório
-                       </button>
-                 </li>
+                    <Link to="/">
+                        <li className="itemLeft">
+                            <img src={logo} className="App-logo" alt="logo" />
+                        </li>
+                    </Link>
+                    
+                    <li className="itemLeft">
+                        <h3 className="mainTitle">How2uSleep</h3>
+                    </li>
+                    
+                    <li className="itemRight">
+                        <Link to="/Sobre">
+                            <button>Sobre</button>
+                        </Link>
+                    </li>
+                    
+                    <li className="itemRight">
+                        <button className="Sobre" onClick={() => console.log("Relatorio") || this.demoFromHTML()}>
+                            Relatório
+                        </button>
+                    </li>
                 </ul>
             </div>
         );

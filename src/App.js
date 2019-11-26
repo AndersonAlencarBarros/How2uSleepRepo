@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import Chart from './Charts/Chart';
 import MenuBar from './Menu/MenuBar';
-import Form from './Form/Form';
 
 var Tempo = [1,2,3,4,5,6,7,8,9,10,11];
 var BatimentosCardiacos = [1,20,3,50,100,50,7,80,10,40,120];
@@ -12,8 +11,8 @@ var FluxoNasal = [1,20,3,50,100,50,7,80,10,40,120];
 var Ruido = [1,20,3,50,100,50,7,80,10,40,120];
 
 const divStyle = {
-    width: 900,
-    height: 400,
+    width: "90vh",
+    height: "40vh",
     margin: "auto"
 };
 
@@ -33,14 +32,6 @@ class App extends Component {
   componentWillMount(){
     this.getChartData();
   }
-
-  // componentDidMount(){
-  //     // this.interval = setInterval(this.fetchNews, 1000); chamar dados da API a cada 1 seg
-  //     axios.get('https://jsonplaceholder.typicode.com/users').then(result => {
-  //       console.log(result)
-  //         this.setState({ mydata: result.data});
-  //     });
-  // }
 
   getChartData(){
     // Ajax calls here
@@ -122,42 +113,26 @@ class App extends Component {
     return (
       <div  className="App">
         <MenuBar />
-
-        <ul className="menuBar">
-
-        <li className="itemLeft">
+     
         <div id="pdf" className="divPrint" style={divStyle} >
           <Chart chartData={this.state.chartData1} title="Batimentos Cardíacos"  />
         </div>
-        </li>
-
-        <li className="itemRight">
+             
         <div className="divPrint1" style={divStyle}>
           <Chart chartData={this.state.chartData2} title="Esforço Respiratório"   />
         </div>
-        </li>
-
-        <li className="itemLeft">
+        
         <div className="divPrint2" style={divStyle}>
           <Chart chartData={this.state.chartData3} title="Saturação de Oxigênio" />
         </div>
-        </li>
-
-        <li className="itemRight">
+        
         <div className="divPrint3" style={divStyle}>
           <Chart chartData={this.state.chartData4} title="Fluxo Nasal"  />
         </div>
-        </li>
-        </ul>
-        
+         
         <div className="divPrint4" style={divStyle}>
             <Chart chartData={this.state.chartData5} title="Ruído"  />
         </div>
-
-        <div className="divPrint5" style={divStyle}>
-          <Form />
-        </div>
-
 
       </div>
     );
@@ -165,3 +140,18 @@ class App extends Component {
 }
 
 export default App;
+
+
+  // componentDidMount(){
+  //     // this.interval = setInterval(this.fetchNews, 1000); chamar dados da API a cada 1 seg
+  //     axios.get('https://jsonplaceholder.typicode.com/users').then(result => {
+  //       console.log(result)
+  //         this.setState({ mydata: result.data});
+  //     });
+  // }
+
+
+// import Form from './Form/Form';
+//   <div className="divPrint5" style={divStyle}>
+//   <Form />
+// </div>
