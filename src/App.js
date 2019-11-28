@@ -11,8 +11,8 @@ var FluxoNasal = [1,20,3,50,100,50,7,80,10,40,120];
 var Ruido = [1,20,3,50,100,50,7,80,10,40,120];
 
 const divStyle = {
-    width: "90vh",
-    height: "40vh",
+    // width: "90vh",
+    // height: "40vh",
     margin: "auto"
 };
 

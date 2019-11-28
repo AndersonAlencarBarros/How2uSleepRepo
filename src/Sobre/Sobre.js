@@ -40,6 +40,7 @@ class Sobre extends Component{
                 <h3>Autores</h3>
                 <p>
                     Anderson de Alencar <br />
+                    Djeysi Alves        <br />
                     Uendel Couto
                 </p>
             </div>
