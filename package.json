@@ -6,7 +6,7 @@
   "dependencies": {
     "@emotion/core": "^10.0.22",
     "@emotion/styled": "^10.0.23",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "chart.js": "^2.9.2",
     "dom-to-image": "^2.6.0",
     "emailjs-com": "^2.4.1",
